@@ -423,3 +423,67 @@ body {
         text-align: center;
     }
 }
+
+/* Progress Section */
+.progress-section {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+#progressPercent {
+    color: var(--accent);
+}
+
+.progress-bar {
+    height: 12px;
+    background: var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--success));
+    border-radius: 6px;
+    transition: width 0.5s ease;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Task Priority */
+.task-item.high-priority {
+    border-right-color: var(--danger);
+}
+
+/* Animations */
+.stat-number {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+}
+
+.task-item:hover {
+    transform: translateX(-5px);
+    box-shadow: var(--shadow);
+}

@@ -63,6 +63,24 @@ function updateStats() {
     totalTasksEl.textContent = total;
     completedTasksEl.textContent = completed;
     pendingTasksEl.textContent = pending;
+    
+    // Update progress bar
+    updateProgress(total, completed);
+}
+
+// ==================== Progress Bar ====================
+function updateProgress(total, completed) {
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    
+    if (total === 0) {
+        progressFill.style.width = '0%';
+        progressPercent.textContent = '0%';
+    } else {
+        const percent = Math.round((completed / total) * 100);
+        progressFill.style.width = percent + '%';
+        progressPercent.textContent = percent + '%';
+    }
 }
 
 // ==================== API Functions ====================

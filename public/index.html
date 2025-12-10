@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تطبيق إدارة المهام</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -28,6 +31,17 @@
             <div class="stat-item">
                 <span class="stat-number" id="pendingTasks">0</span>
                 <span class="stat-label">قيد التنفيذ</span>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>نسبة الإنجاز</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
             </div>
         </div>
 
@@ -59,6 +73,11 @@
                 <p>لا توجد مهام حالياً</p>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>صنع بـ ❤️ | تطبيق إدارة المهام</p>
+        </footer>
     </div>
 
     <!-- Edit Modal -->
@@ -84,4 +103,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
